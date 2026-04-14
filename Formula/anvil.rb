@@ -1,24 +1,24 @@
 class Anvil < Formula
-  desc "AI coding assistant with live remote control — 5 providers, encrypted vault, 90+ commands"
+  desc "AI coding assistant with typed credential vault, live remote control, 5 providers"
   homepage "https://culpur.net/anvil"
-  version "2.1.4"
+  version "2.2.0"
   license "Proprietary"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.1.4/anvil-aarch64-apple-darwin"
-      sha256 "63845f7856c2747252d5230bbf8e5e26544a7881806926e1efe3adbb25d0182e"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.0/anvil-aarch64-apple-darwin"
+      sha256 "4d0fd9cf2364e3f03695c2bcf86c238049137f078dbdc0bd52a99838832f9c6e"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.1.4/anvil-x86_64-apple-darwin"
-      sha256 "93de87e30c649e7700646f2b79a0b107088f521235d1f907360e0dbe7ff11730"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.0/anvil-x86_64-apple-darwin"
+      sha256 "ac2761dbceba809009a34856b06d0383ca963e8c52cd0c5050921fbe9e565a04"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.1.4/anvil-aarch64-unknown-linux-gnu"
-      sha256 "cdc846769d8ff7a61355a18a885ad5fb3c90f2181d09c9d26e1f548e307868b0"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.0/anvil-aarch64-unknown-linux-gnu"
+      sha256 "9317441e1b34aeb3f1014372f8b29b9b46955fc3b238dcf7a15b9a2425ac8e5c"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.1.4/anvil-x86_64-unknown-linux-gnu"
-      sha256 "704491a2ca435e262108c3129eecbe04472f2478a14c6fdc03a908d4820c4af1"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.0/anvil-x86_64-unknown-linux-gnu"
+      sha256 "64470a74ada43cbd5c6a5495b5ce4c17e4895dec177dd3a78a838dac5f8b809f"
     end
   end
   def install
