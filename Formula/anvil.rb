@@ -7,7 +7,7 @@ class Anvil < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-aarch64-apple-darwin"
-      sha256 "402f83b9563b920a5ee5ad333817980fe4bc8aef061be73c9e157da7970b343b"
+      sha256 "3eefe3f37e25ee4544b23bb0c07d318339b10da306d4e78da21f28007aa73bd2"
     else
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-x86_64-apple-darwin"
       sha256 "6bf06d967ff8c9a20ae76c55963ec2d5afacd8a82c75b05ed6678bf1dda7c818"
