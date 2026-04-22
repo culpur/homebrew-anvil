@@ -7,20 +7,20 @@ class Anvil < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-aarch64-apple-darwin"
-      sha256 "3eefe3f37e25ee4544b23bb0c07d318339b10da306d4e78da21f28007aa73bd2"
+      sha256 "ba04fb0b35874346455708d0ca921dc13ac40c9c7aefb10d907bcd56783c5c62"
     else
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-x86_64-apple-darwin"
-      sha256 "6bf06d967ff8c9a20ae76c55963ec2d5afacd8a82c75b05ed6678bf1dda7c818"
+      sha256 "c7ddec7358181c9653c3f3fdde6d1fb1b98be1e34de621fadc454367662b87b2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-aarch64-unknown-linux-gnu"
-      sha256 "644d4e581d33eb61a58f4c32324dbd61ff3861b9ab83b4bba4b3828488d6b351"
+      sha256 "5ce9564bf75ec04c2d45c821bb083c4c69bf41ddb6dec13cf670ae1b3c2b155f"
     else
       url "https://github.com/culpur/anvil/releases/download/v2.2.8/anvil-x86_64-unknown-linux-gnu"
-      sha256 "a57618881cd080617e3faba25b490c5ceb3f11d6b2fef9c695e7f4908ce2dd97"
+      sha256 "ada6b201424caec0abd334291d02e3d33697ecac212763e89519a16cbcc29b87"
     end
   end
 
