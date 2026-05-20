@@ -1,28 +1,28 @@
 class Anvil < Formula
   desc "AI coding assistant with typed credential vault, live remote control, 5 providers"
   homepage "https://culpur.net/anvil"
-  version "2.2.17"
+  version "2.2.18"
   license "Proprietary"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.17/anvil-aarch64-apple-darwin"
-      sha256 "e1b66f8c6bb88ea0deaaa8b238e05896066560acb35cd6654c572a9b203d7ccb"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.18/anvil-aarch64-apple-darwin"
+      sha256 "6e660291c506b229c1ca1438c02758a20f5f6e4963448420b8abada94a8ff13d"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.17/anvil-x86_64-apple-darwin"
-      sha256 "5450b5c0d0d645a4da6a175d57dc762085fad85d14a607f7ec40bc0342636da9"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.18/anvil-x86_64-apple-darwin"
+      sha256 "926bc5128fbaeb5cb8ad0dfcc5f8d36cc83475b509a6116505c51129fce8edaa"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.17/anvil-aarch64-unknown-linux-gnu"
-      sha256 "3de21a630defa8898231fdc1fae4d14e5e00e7907ba0ba789f046c722d4e6ade"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.18/anvil-aarch64-unknown-linux-gnu"
+      sha256 "d513cfff4b107d93c14d103ab9eeccb6b0514d283ee5f42deca78ec01b0168e0"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.17/anvil-x86_64-unknown-linux-gnu"
-      sha256 "837e2e9f7ffca4463fefbca4035fcc23712c9af8f80c9e4ac66a35c6e89ade3d"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.18/anvil-x86_64-unknown-linux-gnu"
+      sha256 "4d1679b96bedbdc85f96d855641d6f83f4d214763d12e4b37ec636e57ff367d6"
     end
   end
   resource "manpage" do
-    url "https://github.com/culpur/anvil/releases/download/v2.2.17/anvil.1"
+    url "https://github.com/culpur/anvil/releases/download/v2.2.18/anvil.1"
     sha256 "710ee6b1640cf31fb5900b6bd1e1d9bb051ec1d290e3f2a10d632b9ed8c91227"
   end
   def install
