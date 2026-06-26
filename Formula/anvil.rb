@@ -1,29 +1,29 @@
 class Anvil < Formula
   desc "AI coding assistant with typed credential vault, live remote control, 5 providers"
   homepage "https://culpur.net/anvil"
-  version "2.2.21"
+  version "2.2.22"
   license "Proprietary"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.21/anvil-aarch64-apple-darwin"
-      sha256 "e38457d781c97fa54613168a2d2633a4ca410393bcdee383a3dd3f7682d43e87"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-aarch64-apple-darwin"
+      sha256 "d096c08cbb00bfb0676e002fec3e041b0b42785a52fe2afaee233c4a6a6bb21c"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.21/anvil-x86_64-apple-darwin"
-      sha256 "332dd12fa688cdf76aaa379840ebbe973981876c378a07eaf5432f48ea11d6bc"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-x86_64-apple-darwin"
+      sha256 "3e8a920d4067c76545fcee15958200b8639373782218e845b6e9a72f652b35c0"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.21/anvil-aarch64-unknown-linux-gnu"
-      sha256 "a1e126f6a5b9f58ca386c0492b961981ee86e65e626213845284f119b6dcf37c"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-aarch64-unknown-linux-gnu"
+      sha256 "c1d786cb730185b0385068dc827dfe3ba2dca561d06f4cd65f5fc024d713c01b"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.21/anvil-x86_64-unknown-linux-gnu"
-      sha256 "88dadbf5fc8920b1ba35ebde82ee886022f6ee7444946cac5c10361bbd8d5f36"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-x86_64-unknown-linux-gnu"
+      sha256 "57d11e4862bdc12240f9c4e815e2e1a02b8612b49b3dfbe97fb9411c7f0f8523"
     end
   end
   resource "manpage" do
-    url "https://github.com/culpur/anvil/releases/download/v2.2.21/anvil.1"
-    sha256 "5f2f60995e40243beaf8184f23a712b0bc92c5ce9086cdbfebb59acd44413b90"
+    url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil.1"
+    sha256 "358fea1175cd158aa7af7ecce2354735adcad5cd2433da837909c6f4252ac50c"
   end
   def install
     downloaded = Dir["anvil-*"].first || "anvil"
