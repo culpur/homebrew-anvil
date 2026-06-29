@@ -1,36 +1,35 @@
 class Anvil < Formula
-  desc "AI coding assistant with typed credential vault, live remote control, 5 providers"
+  desc "AI coding assistant — multi-provider, live remote control, encrypted vault"
   homepage "https://culpur.net/anvil"
-  version "2.2.22"
+  version "2.2.23"
   license "Proprietary"
+
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-aarch64-apple-darwin"
-      sha256 "d096c08cbb00bfb0676e002fec3e041b0b42785a52fe2afaee233c4a6a6bb21c"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.23/anvil-aarch64-apple-darwin"
+      sha256 "f0ec631479323603c7032c67650087359c018c93c0a2ef91ea9cb76c068cdf5b"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-x86_64-apple-darwin"
-      sha256 "3e8a920d4067c76545fcee15958200b8639373782218e845b6e9a72f652b35c0"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.23/anvil-x86_64-apple-darwin"
+      sha256 "27dccb64a66c7e6395daa5d69856e5a53b66b62af6b4e68bac1b97b436a8a85e"
     end
   end
+
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-aarch64-unknown-linux-gnu"
-      sha256 "c1d786cb730185b0385068dc827dfe3ba2dca561d06f4cd65f5fc024d713c01b"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.23/anvil-aarch64-unknown-linux-gnu"
+      sha256 "8b0b4fe844e82c6d4d17f3eb70755e1ab290e810aeeda6a9c259db692c15d131"
     else
-      url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil-x86_64-unknown-linux-gnu"
-      sha256 "57d11e4862bdc12240f9c4e815e2e1a02b8612b49b3dfbe97fb9411c7f0f8523"
+      url "https://github.com/culpur/anvil/releases/download/v2.2.23/anvil-x86_64-unknown-linux-gnu"
+      sha256 "c63bad637e429ceea143e8cf342e8c81e8fa1090880ab706defca81d644330c8"
     end
   end
-  resource "manpage" do
-    url "https://github.com/culpur/anvil/releases/download/v2.2.22/anvil.1"
-    sha256 "358fea1175cd158aa7af7ecce2354735adcad5cd2433da837909c6f4252ac50c"
-  end
+
   def install
     downloaded = Dir["anvil-*"].first || "anvil"
     bin.install downloaded => "anvil"
-    resource("manpage").stage { man1.install "anvil.1" }
   end
+
   test do
-    assert_match "Anvil CLI", shell_output("#{bin}/anvil --version")
+    assert_match "Anvil", shell_output("#{bin}/anvil --version")
   end
 end
